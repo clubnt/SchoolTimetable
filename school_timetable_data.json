@@ -1,0 +1,40 @@
+{
+  "classes": [],
+  "rooms": [],
+  "teachers": [],
+  "lessons": [
+    {
+      "id": 1,
+      "name": "sda"
+    },
+    {
+      "id": 2,
+      "name": "sdaa"
+    },
+    {
+      "id": 1,
+      "name": "sda"
+    },
+    {
+      "id": 2,
+      "name": "sdaa"
+    },
+    {
+      "id": 1,
+      "name": "sda"
+    },
+    {
+      "id": 2,
+      "name": "sdaa"
+    },
+    {
+      "id": 1,
+      "name": "sda"
+    },
+    {
+      "id": 2,
+      "name": "sdaa"
+    }
+  ],
+  "teacher_lessons": []
+}
