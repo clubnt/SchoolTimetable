@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.MainModel;
+import model.Room;
 
 public class Main extends Application
 {
@@ -25,6 +26,7 @@ public class Main extends Application
         MainModel mn = new MainModel();
 
         mn.parse();
+        mn._roomsList.add(new Room(1,"Q",1));
         mn.save();
 
         launch(args);

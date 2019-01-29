@@ -134,7 +134,7 @@ public class MainModel
 
         JsonArray roomsJsonArray = jsonObject.get("rooms").getAsJsonArray();
 
-        for (int i = 0; i < classesJsonArray.size(); i++)
+        for (int i = 0; i < roomsJsonArray.size(); i++)
         {
             JsonElement roomJsonElement = roomsJsonArray.get(i);
             int roomId = roomJsonElement.getAsJsonObject().get("id").getAsInt();
@@ -253,4 +253,11 @@ public class MainModel
         return fileText;
     }
 
+    public void clear()
+    {
+        _lessonsList.clear();
+        _roomsList.clear();
+        _teachersList.clear();
+        _classesList.clear();
+    }
 }

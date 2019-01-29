@@ -5,8 +5,6 @@ import model.Lesson;
 import javafx.scene.control.*;
 import model.MainModel;
 import model.*;
-import sun.awt.SunHints;
-
 
 public class ControllerCreateList {
 
@@ -17,8 +15,7 @@ public class ControllerCreateList {
     Label    lzb;
 @FXML
     TextField textfield;
-
-    @FXML
+@FXML
 void Create()
 {
 
@@ -28,6 +25,11 @@ void Create()
        _model._lessonsList.add(new Lesson(_model._lessonsList.size() + 1,textfield.getText()));
        _model.save();
    }
+    if(Controller.createListVisualName.equals("Класс"))
+    {
+        _model._classesList.add(new SchoolClass(_model._classesList.size() + 1,textfield.getText()));
+        _model.save();
+    }
     if(Controller.createListVisualName.equals("Учителя"))
     {
         Teacher teacher = new Teacher(_model._lessonsList.size() +1,textfield.getText());
@@ -55,11 +57,11 @@ void initialize()
   lzb.setText(Controller.createListVisualName);
     if(Controller.createListVisualName.equals("Помещения"))
     {
-        roomtext.setPromptText("Number");
         roomtext.setVisible(true);
+        roomtext.setPromptText("Number");
+
     }
-    else {roomtext.setVisible(false);}
-    if(Controller.createListVisualName.equals("Учителя"))
+    else if(Controller.createListVisualName.equals("Учителя"))
     {
         roomtext.setPromptText("Lesson");
         roomtext.setVisible(true);

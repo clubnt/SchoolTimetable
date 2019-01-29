@@ -22,12 +22,12 @@
       <AnchorPane prefHeight="600.0" prefWidth="600.0">
          <children>
             <Button layoutX="14.0" layoutY="50.0" mnemonicParsing="false" onAction="#newLesson" prefHeight="25.0" prefWidth="105.0" text="+Урок" />
-            <Button layoutX="330.0" layoutY="46.0" mnemonicParsing="false" onAction="#newLessonslist" prefHeight="25.0" prefWidth="105.0" text="+Расписание" />
+            <Button layoutX="330.0" layoutY="46.0" mnemonicParsing="false" onAction="#newClass" prefHeight="25.0" prefWidth="105.0" text="+Класс" />
             <Button layoutX="14.0" layoutY="243.0" mnemonicParsing="false" onAction="#newTeacher" prefHeight="25.0" prefWidth="105.0" text="+Учитель" />
             <Button layoutX="330.0" layoutY="239.0" mnemonicParsing="false" onAction="#newRoom" prefHeight="25.0" prefWidth="105.0" text="+Помещение" />
             <ListView fx:id="lessonsList" layoutX="14.0" layoutY="75.0" prefHeight="159.0" prefWidth="105.0" />
             <ListView fx:id="teacherlist" layoutX="14.0" layoutY="268.0" prefHeight="159.0" prefWidth="105.0" />
-            <ListView fx:id="lessonslistlist" layoutX="330.0" layoutY="71.0" prefHeight="159.0" prefWidth="105.0" />
+            <ListView fx:id="classeslist" layoutX="330.0" layoutY="71.0" prefHeight="159.0" prefWidth="105.0" />
             <ListView fx:id="roomlist" layoutX="330.0" layoutY="264.0" prefHeight="159.0" prefWidth="105.0" />
             <MenuBar layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="423.0">
               <menus>

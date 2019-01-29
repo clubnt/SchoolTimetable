@@ -18,6 +18,8 @@ import java.io.IOException;
 public class Controller
 {
     ObservableList<String> items_lessons = FXCollections.observableArrayList();
+    ObservableList<String> items_class= FXCollections.observableArrayList();
+    ObservableList<String> items_rooms= FXCollections.observableArrayList();
     MainModel model = new MainModel();
 
 
@@ -28,33 +30,64 @@ public class Controller
     @FXML
     public void updater()
     {
+        model.clear();
         model.parse();
+
+
+
+        {
+                items_class.clear();
+                for (int i = 0; i < model._classesList.size(); i++) {
+
+                    items_class.add(model._classesList.get(i).getName());
+                }
+
+
+                System.out.println();
+                classeslist.setItems(items_class);
+
+        }
+
+        {
+            items_rooms.clear();
+            for (int i = 0; i < model._roomsList.size(); i++) {
+
+                items_rooms.add(model._roomsList.get(i).getName() + " " + model._roomsList.get(i).getNumber());
+
+            }
+
+
+            System.out.println();
+            roomlist.setItems(items_rooms);
+
+        }
+
+        {
+            items_lessons.clear();
+            for (int i = 0; i < model._lessonsList.size(); i++) {
+
+                items_lessons.add(model._lessonsList.get(i).getName());
+            }
+
+
+            System.out.println();
+            lessonsList.setItems(items_lessons);
+
+        }
         model.save();
-        items_lessons.remove(0,items_lessons.size()-1);
-
-        for (int i = 0; i < model._lessonsList.size(); i++) {
-
-            items_lessons.add(model._lessonsList.get(i).getName());
-        }
-        for (int i = 0; i < items_lessons.size(); i++) {
-            System.out.println(items_lessons.get(i));
-        }
-
-        System.out.println();
-        lessonsList.setItems(items_lessons);
-
     }
 public void initialize() {
 
-    }
 
+
+    }
     public static String createListVisualName;
     @FXML
     ListView lessonsList;
     @FXML
     ListView teacherlist;
     @FXML
-    ListView lessonslistlist;
+    ListView classeslist;
     @FXML
     ListView roomlist;
 
@@ -78,9 +111,9 @@ public void initialize() {
         this.startList();
     }
     @FXML
-        void newLessonslist()
+        void newClass()
     {
-        Controller.createListVisualName = "Расписания";
+        Controller.createListVisualName = "Класс";
         this.startList();
 
     }
